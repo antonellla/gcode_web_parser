@@ -1,0 +1,23 @@
+{
+  "name": "gcode_simulator",
+  "version": "1.0.0",
+  "description": "Web-based toolpath simulator for CNC G Codes",
+  "main": "index.ts",
+  "scripts": {
+    "start": "node server",
+    "redo_server_file": "tsc --allowJs --target esnext --removeComments --outFile server/index.js server/index.doc.js"
+  },
+  "keywords": [],
+  "author": "Antonella Wilby",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:antonellla/gcode_simulator.git"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.2"
+  },
+  "dependencies": {
+    "@types/node": "^22.13.14",
+    "fs": "^0.0.1-security"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "types": ["node"],
+    "strict": true,
+    "moduleResolution": "node",
+    "noEmit": false,
+    "module": "esnext",
+    "outDir": "./public/src",
+    "rootDir": "./src",
+    "target": "es5",
+  }
+}
