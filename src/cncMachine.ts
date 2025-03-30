@@ -1,3 +1,6 @@
+/**
+ *  Define interface for CNC Machine Modal G-codes.
+ */
 export interface cncMachine {
     /**
      * Group 01: Motion Codes
@@ -131,11 +134,19 @@ export interface cncMachine {
     rotationMode: boolean;
 
     /**
-     * M Codes for controlling coolant
+     * M Codes for controlling coolant:
      *      M08: Coolant ON
      *      M09: Coolant OFF (default)
      */
     coolantState: boolean;
+
+    /**
+     * M Codes for controlling spindle:
+     *      M03: Start spindle CLOCKWISE (spindleState: 1)
+     *      M04: Start spindle COUNTERCLOCKWISE (spindleState: -1)
+     *      M05: STOP spindle (spindleState: 0) (default)
+     */
+    spindleState: number;
 
     /**
      * Spindle speed in RPM.
@@ -174,5 +185,6 @@ let machineState: cncMachine = {
     cannedCycle: "G80",                         // Canned Cycle Cancel
     feedMode: "G94",                            // Inverse Time Feed Deactivate
     pointReturn: "G98",                         // Initial Point Return
-    coolantState: false                         // Coolant OFF on start-up
+    coolantState: false,                        // Coolant OFF on start-up
+    spindleState: 0                             // Spindle STOPPED on start-up
 }
