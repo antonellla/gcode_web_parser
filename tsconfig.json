@@ -2,9 +2,9 @@
   "compilerOptions": {
     "types": ["node"],
     "strict": true,
-    "moduleResolution": "node",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
     "noEmit": false,
-    "module": "esnext",
     "outDir": "./public/src",
     "rootDir": "./src",
     "target": "es5",
