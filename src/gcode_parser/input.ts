@@ -4,12 +4,11 @@
  ****************************************************************************************** 
 */
 
-export {InputStream, createInputStream}
+export { InputStream, createInputStream }
 
 /**
- * @brief Process input character stream.
- * @param input G Code character input 
- * @returns InputStream object 
+ * Process input character stream.
+ * @param input G Code character input. 
  */
 type InputStream = {
     next: () => string;
@@ -21,7 +20,7 @@ type InputStream = {
 /**
  * todo 
  * @param input 
- * @returns 
+ * @returns InputStream object.
  */
 function createInputStream(input: string): InputStream {
     let position: number = 0;
