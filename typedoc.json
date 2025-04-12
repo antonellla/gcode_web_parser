@@ -1,0 +1,10 @@
+{
+    "name": "G Code Web Parser Documentation",
+    "entryPointStrategy": "expand",
+    "entryPoints": ["src/*", "src/gcode_parser/*.ts"],
+    "out": "docs",
+	"readme": "./README.md",
+    "projectDocuments": ["reference/*"],
+    "plugin": ["typedoc-material-theme"],
+    "themeColor": "#97b8bd"
+}
